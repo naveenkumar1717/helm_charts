@@ -32,7 +32,7 @@ readinessProbe:
     periodSeconds: 10
     timeoutSeconds: 3
     failureThreshold: 3
-configconfigMapData:
+configMapData:
   SPRING_DATASOURCE_URL: "jdbc:mysql://database-1.cdi64iuy0oas.us-east-1.rds.amazonaws.com:3306/quizapp"
   SPRING_DATASOURCE_USERNAME: "admin"
   SPRING_DATASOURCE_PASSWORD: "9112Ntorq"   
