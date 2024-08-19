@@ -5,7 +5,7 @@ image:
   pullPolicy: IfNotPresent
   tag: "v1"
 service:
-  type: nodePort
+  type: NodePort
   targetPort: 8080
   port: 8080
   nodePort: 30078
