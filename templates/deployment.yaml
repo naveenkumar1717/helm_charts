@@ -32,7 +32,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
           - configMapRef:
-              name: {{ include "java-app.fullname" . }}--configmap
+              name: {{ include "java-app.fullname" . }}-configmap
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
