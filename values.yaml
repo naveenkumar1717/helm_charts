@@ -19,7 +19,7 @@ resources:
 livenessProbe:
   httpGet:
     path: /question/allQuestions
-    port: http
+    port: 8080
     initialDelaySeconds: 30
     periodSeconds: 10
     timeoutSeconds: 3
@@ -27,7 +27,7 @@ livenessProbe:
 readinessProbe:
   httpGet:
     path: /question/allQuestions
-    port: http
+    port: 8080
     initialDelaySeconds: 30
     periodSeconds: 10
     timeoutSeconds: 3
