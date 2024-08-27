@@ -8,6 +8,9 @@ service:
   type: NodePort
   targetPort: 8080
   port: 8080
+  nodePort: 30089
+  targetPort: 8081
+  port: 8081
   nodePort: 30078
 resources:
   limits:
