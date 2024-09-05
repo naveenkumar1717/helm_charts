@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      {{- include "java-app.selectorLabels" . | nindent 6 }}
+      {{- include "java-app.selectorLabels" . | nindent 4 }}
   endpoints:
     - port: http
       path: "/actuator/prometheus"
