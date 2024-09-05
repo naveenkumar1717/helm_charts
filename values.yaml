@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: naveentrodo/quizapp
   pullPolicy: IfNotPresent
-  tag: "v2"
+  tag: "0.0.3"
 service:
   type: NodePort
   targetPort: 8080
@@ -33,9 +33,9 @@ readinessProbe:
   timeoutSeconds: 3
   failureThreshold: 3
 configMapData:
-  SPRING_DATASOURCE_URL: "jdbc:mysql://database-1.c7mq86w8a422.us-east-1.rds.amazonaws.com:3306/quizapp"
-  SPRING_DATASOURCE_USERNAME: "admin"
-  SPRING_DATASOURCE_PASSWORD: "9112Ntorq"   
+  SPRING_DATASOURCE_URL: "jdbc:mysql://my-release-mysql.default.svc.cluster.local:3306/quizapp"
+  SPRING_DATASOURCE_USERNAME: "root"
+  SPRING_DATASOURCE_PASSWORD: "MxnNlQIOR2"   
 serviceAccount:
   create: false
 autoscaling:
