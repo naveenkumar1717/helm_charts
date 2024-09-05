@@ -4,7 +4,7 @@ metadata:
   name: {{ include "java-app.fullname" . }}
   labels:
     {{- include "java-app.labels" . | nindent 4 }}
-    app.kubernetes.io/svc-label: {{ .Release.Service }}
+    app: {{ .Release.Name }}
   namespace: {{ .Values.namespace}}
 spec:
   type: {{ .Values.service.type }}
