@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "java-app.fullname" . }}-monitor
+  namespace: {{ .Values.namespace}}
+  labels:
+    release: prometheus-operator
+spec:
+  selector:
+    matchLabels:
+      {{- include "java-app.labels" . | nindent 4 }}
+  endpoints:
+    - port: http
+      path: "/actuator/prometheus"
