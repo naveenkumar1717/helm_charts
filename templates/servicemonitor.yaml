@@ -4,11 +4,11 @@ metadata:
   name: {{ include "java-app.fullname" . }}-monitor
   namespace: {{ .Values.namespace}}
   labels:
-    release: prometheus-operator
+    release: prometheus-stack
 spec:
   selector:
     matchLabels:
       app: {{ .Release.Name }}
   endpoints:
-    - port: {{ .Values.servicemonitor.port }}
+    - port: http
       path: "/actuator/prometheus"
