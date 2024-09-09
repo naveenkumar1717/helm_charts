@@ -35,7 +35,7 @@ readinessProbe:
 configMapData:
   SPRING_DATASOURCE_URL: "jdbc:mysql://my-release-mysql.default.svc.cluster.local:3306/quizapp"
   SPRING_DATASOURCE_USERNAME: "root"
-  SPRING_DATASOURCE_PASSWORD: "yKuKxRZKOL"   
+  SPRING_DATASOURCE_PASSWORD: "9ZcGwFXADA"   
 serviceAccount:
   create: false
 autoscaling:
