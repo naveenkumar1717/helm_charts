@@ -1,0 +1,14 @@
+#it will have the deatils of vautl authentication
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: VaultAuth
+metadata:
+  name: {{ Values.app }}-vaultauth
+  namespace: {{ Values.namespace }}
+spec:
+  method: kubernetes
+  mount: quizapp-auth-mount
+  kubernetes:
+    role: quizapp-role
+    serviceAccount: quizapp-serviceaccount
+    audiences:
+      - vault

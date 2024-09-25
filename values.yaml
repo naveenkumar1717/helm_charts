@@ -1,4 +1,5 @@
 namespace: quizapp
+app: quiz
 replicaCount: 1
 image:
   repository: naveentrodo/quizapp
@@ -46,6 +47,10 @@ autoscaling:
   targetMemoryUtilizationPercentage: 80
 servicemonitor:
    port: "8080"
+vault:
+  mount: quizapp
+  path: app/config
+  secretname: quizapp-secret
 
 # Additional volumes on the output Deployment definition.
 #volumes: []
