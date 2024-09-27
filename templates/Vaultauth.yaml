@@ -2,8 +2,8 @@
 apiVersion: secrets.hashicorp.com/v1beta1
 kind: VaultAuth
 metadata:
-  name: {{ Values.app }}-vaultauth
-  namespace: {{ Values.namespace }}
+  name: {{ .Values.app }}-vaultauth
+  namespace: {{ .Values.namespace }}
 spec:
   method: kubernetes
   mount: quizapp-auth-mount
