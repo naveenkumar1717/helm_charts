@@ -48,8 +48,8 @@ autoscaling:
 servicemonitor:
    port: "8080"
 vault:
-  mount: quizapp
-  path: app/config
+  mount: applications
+  path: quizapp/config
   secretname: quizapp-secret
 
 # Additional volumes on the output Deployment definition.
